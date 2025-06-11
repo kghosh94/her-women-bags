@@ -1357,8 +1357,12 @@ a:hover {
     background-color: #292929;
     border: 2px solid #292929;
 }
+.single-product-banner-section {
+    overflow: hidden;
+}
 .single-product-image-banner-area {
     height: 400px;
+    padding: 0px 0px 0px 0px;
 }
 .single-product-image-banner-area .product-banner-row {
     height: 100%;
@@ -1372,7 +1376,24 @@ a:hover {
 .single-product-image-banner-area .product-banner-img {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -100px;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+}
+.single-product-image-banner-area .product-banner-img:before {
+    background-image: url(../images/her-large-color-logo.svg);
+    content: '';
+    width: 380px;
+    height: 140px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    top: -45px;
+    left: 0;
+    right: -77px;
+    margin: auto;
 }
 /****************** //End cart page css*************************/
 
