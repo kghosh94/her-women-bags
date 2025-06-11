@@ -1232,6 +1232,7 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 25px;
+    justify-content: flex-end;
 }
 .cart_inner .checkout_btn_inner .shop-btn {
     margin-top: 0;
