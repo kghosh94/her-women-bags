@@ -249,6 +249,9 @@
     .banner_bg_main {
         height: 635px;
     }
+    .main-banner-container .banner-model-area {
+        width: 100%;
+    }
     .banner-prodcut-model .banner-product {
         max-width: 350px;
         width: 100%;
