@@ -1395,6 +1395,13 @@ a:hover {
     right: -77px;
     margin: auto;
 }
+.single-product-image-banner-area .product-banner-left .breadcrumb-area {
+    font-size: 20px;
+}
+.single-product-image-banner-area .product-banner-title-area {
+    top: 40%;
+    transform: translateY(-60%);
+}
 /****************** //End cart page css*************************/
 
 
