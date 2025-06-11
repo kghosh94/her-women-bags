@@ -1357,6 +1357,23 @@ a:hover {
     background-color: #292929;
     border: 2px solid #292929;
 }
+.single-product-image-banner-area {
+    height: 400px;
+}
+.single-product-image-banner-area .product-banner-row {
+    height: 100%;
+}
+.single-product-image-banner-area .product-banner-img img {
+    max-width: 380px;
+}
+.single-product-image-banner-area .product-banner-right {
+    position: relative;
+}
+.single-product-image-banner-area .product-banner-img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
 /****************** //End cart page css*************************/
 
 
