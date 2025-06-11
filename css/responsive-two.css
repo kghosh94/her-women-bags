@@ -485,6 +485,18 @@
     .single-product-image-banner-area .product-banner-left .breadcrumb-area {
         font-size: 14px;
     }
+    .confirmation-banner-area h1 {
+        font-size: 24px;
+        margin: 0 0 10px;
+    }
+    .confirmation-banner-area h3 {
+        font-size: 18px;
+    }
+    .confirmation-banner-area img {
+        max-width: 60px;
+        width: 100%;
+        margin: auto auto 20px auto;
+    }
 }
 
 
@@ -615,6 +627,18 @@
     }
     .cart-items-table .delete-item {
         background-size: 12px;
+    }
+    .confirmation-banner-area h1 {
+        font-size: 20px;
+    }
+    .confirmation-banner-area h3 {
+        font-size: 16px;
+    }
+    .header_section .containt_main {
+        padding: 0 4px 0 4px;
+    }
+    .login_menu li {
+        padding-left: 0;
     }
 }
 

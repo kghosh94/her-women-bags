@@ -900,6 +900,8 @@ a:hover {
 .sale-banner-back img {
     max-width: 260px;
     width: 100%;
+    margin: auto;
+    display: block;
 }
 .sale-banner-back::before {
     content: '';
