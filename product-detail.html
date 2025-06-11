@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+        <!-- font awesome -->
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+        <!-- owl stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <!-- bootstrap css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive-two.css">
+    </head>
+    <body>
+        
+        <div class="product-banner-section">
+            <!-- header top section start -->
+            <div class="container">
+                <div class="header_section_top" id="common-header-top">
+                </div>
+            </div>
+            <!-- header top section start -->
+            <div class="container">
+                <div class="product-banner-area">
+                    <div class="product-banner-row row">
+                        <div class="col-12 col-lg-7 col-md-7 col-sm-12 col-xs-12 product-banner-left">
+                            <div class="product-banner-title-area">
+                                <h1>Shop New Arrivals</h1>
+                                <p class="breadcrumb-area"><span class="previous-page">Home</span> > <span class="current-page">New Arrivals</span></p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-5 col-md-5 col-sm-12 col-xs-12 product-banner-right">
+                            <div class="product-banner-img">
+                                <img src="images/new-arrival-collection2.png" alt="Product">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+          
+          
+        <div class="product_image_area">
+            <div class="container">
+                <div class="row s_product_inner justify-content-between">
+                    <div class="col-lg-5 col-xl-5 top-product-slider">
+                        <div class="product_slider_area swiper mySwiper2">
+                            <div class="swiper-wrapper" id="product-slider">
+
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div thumbsSlider="" class="swiper mySwiper product_slider_bottom_area">
+                            <div class="swiper-wrapper" id="product-slider-bottom">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-xl-7">
+                        <div class="s_product_text" id="product-container">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Start sale banner section-->
+        <div class="common-sale-banner-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-5 col-md-6 col-sm-12">
+                        <div class="sale-banner-back">
+                            <div class="sale-model-area">
+                                <img src="images/sale-banner-model.png" alt="Banner">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-7 col-md-6 col-sm-12">
+                        <div class="sale-banner-content">
+                            <h2>End of season 2025 sale up to 30%</h2>
+                            <h3>Stock is limited. Order now to avoid disappointment.</h3>
+                            <a href="#" class="shop-btn">Get it now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//End sale banner section-->
+
+        <!-- footer section start -->
+        <div class="footer_section" id="footer-section"></div>
+        <!-- footer section end -->
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        
+        
+        <!-- for header -->
+        <script src="header.js"></script>
+
+        <!-- for footer -->
+        <script src="footer.js"></script>
+        
+        <script>
+            // Fetch the product ID from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = parseInt(urlParams.get('id'));
+            
+            // Load product data (you can fetch this from all-products.json instead)
+            fetch('all-products.json')
+              .then(res => res.json())
+              .then(products => {
+                const product = products.find(p => p.id === productId);
+                const container = document.getElementById('product-container');
+
+                if (product && product.productSlider) {
+                    // If product and product slider are found, render its details
+                    const SliderContainer = document.getElementById('product-slider');
+                    const SliderContainerTwo = document.getElementById('product-slider-bottom');
+
+                    product.productSlider.forEach(src => {
+                        const slide = document.createElement("div");
+                        slide.className = "swiper-slide";
+                        slide.innerHTML = `<img src="${src}" alt="${product.name}" style="width: 100%;">`;
+                        SliderContainer.appendChild(slide);
+                    });
+
+                    product.productSlider.forEach(src => {
+                        const slide2 = document.createElement("div");
+                        slide2.className = "swiper-slide";
+                        slide2.innerHTML = `<img src="${src}" alt="${product.name}" style="width: 100%;">`;
+                        SliderContainerTwo.appendChild(slide2);
+                    });
+
+                    var swiper = new Swiper(".mySwiper", {
+                        loop: true,
+                        spaceBetween: 10,
+                        slidesPerView: 4,
+                        freeMode: true,
+                        watchSlidesProgress: true,
+                        });
+
+                    var swiper2 = new Swiper(".mySwiper2", {
+                        loop: true,
+                        spaceBetween: 10,
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                        thumbs: {
+                            swiper: swiper,
+                        },
+                    });
+
+                    // Render product details
+                    container.innerHTML = `
+                    <div class="content_right_area">
+                       <span class="product-review-area">
+                            <img src="images/green-review-star.svg" class="product-review-star" alt="Review Star"><span class="review-no"> ${product.rating}</span>(${product.noOfReview} Reviews)
+                        </span>
+                        <h3>${product.name}</h3>
+                        <h2>$${product.price.toFixed(2)}</h2>
+                        <ul class="list">
+                        <li>
+                            <span class="info-title">Category</span> :<span class="collection-info"> ${product.collection}</span>
+                        </li>
+                        <li>
+                            <span class="info-title">Availibility</span><span class="stock-info in-stock"> : In Stock</span>
+                        </li>
+                        </ul>
+                        <p> ${product.description}</p>
+                        <div class="card_area">
+                            <div class="product_count">
+                                <button class="number-decrement" id="number-decrement-btn">-</button>
+                                <input class="input-number" id="quantity-box" type="text" value="1" min="1" max="5">
+                                <button class="number-increment" id="number-increment-btn">+</button>
+                            </div>
+                        </div>
+                        <div class="product-btn-group d-flex justify-content-start align-items-center">
+                            <button type="button" class="btn_3 add-to-cart-btn shop-btn">add to cart</button>
+                        </div>
+                    </div>
+                  `;
+                
+                // Quantity increment/decrement
+                const incrementBtn = document.getElementById('number-increment-btn');
+                const decrementBtn = document.getElementById('number-decrement-btn');
+                const quantityInput = document.getElementById('quantity-box');
+
+
+                incrementBtn.addEventListener('click', () => {
+                    let currentVal = parseInt(quantityInput.value);
+                    let max = parseInt(quantityInput.max) || 5;
+                    if (currentVal < max) {
+                    quantityInput.value = currentVal + 1;
+                    }
+                });
+
+                decrementBtn.addEventListener('click', () => {
+                    let currentVal = parseInt(quantityInput.value);
+                    let min = parseInt(quantityInput.min) || 1;
+                    if (currentVal > min) {
+                    quantityInput.value = currentVal - 1;
+                    }
+                });
+
+
+                // Add to Cart functionality
+                const addToCartBtn = document.querySelector('.add-to-cart-btn');
+                addToCartBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const ProductQuantity = parseInt(quantityInput.value);
+
+                    const cartItem = {
+                        id: product.id,
+                        name: product.name,
+                        price: product.price,
+                        quantity: ProductQuantity,
+                        image: product.image, // main image
+                        url: product.url      // to link back to product detail
+                    };
+
+                    // let cart = [];
+                    // try {
+                    //     const storedCart = JSON.parse(localStorage.getItem('cart'));
+                    //     if (Array.isArray(storedCart)) {
+                    //     cart = storedCart;
+                    //     }
+                    // } catch (e) {
+                        
+                    // }
+
+
+                    // Get current cart from localStorage or initialize empty array
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    
+                    
+                    // Check if item already in cart
+                    const existingIndex = cart.findIndex(item => item.id === cartItem.id);
+
+                    
+                    if (existingIndex > -1) {
+                    // If product already in cart, increase the quantity
+                    cart[existingIndex].quantity += ProductQuantity;
+                    } else {
+                    // Otherwise, add to cart
+                    cart.push(cartItem);
+                    }
+
+                    //For cart counter
+                    function updateCartCount() {
+                        // const cart = getCart();
+                        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                        document.getElementById('header-cart-count').textContent = totalItems;
+                    }
+                    // document.addEventListener('DOMContentLoaded', updateCartCount);
+
+                    // Save cart back to localStorage
+                    localStorage.setItem('cart', JSON.stringify(cart));
+
+                    updateCartCount();
+                    
+                    // Optional: feedback to user
+                    alert(`${product.name} (${ProductQuantity}) added to cart!`);
+
+                    // function getCart() {
+                    //     return JSON.parse(localStorage.getItem('cart')) || [];
+                    // }
+
+                });
+                  
+                } else {
+                  // Show product not found message
+                  container.innerHTML = `
+                    <div style="padding: 2rem; text-align: center; color: red;">
+                      <h2>Product Not Found</h2>
+                      <p>The product you're looking for does not exist or may have been removed.</p>
+                      <a href="index.html" style="color: #007BFF;">← Back to Home</a>
+                    </div>
+                  `;
+                }
+              })
+              .catch(error => {
+                console.error("Failed to load product data:", error);
+                document.getElementById('product-container').innerHTML = `
+                  <div style="padding: 2rem; text-align: center; color: red;">
+                    <h2>Error Loading Product</h2>
+                    <p>Something went wrong while trying to load the product. Please try again later.</p>
+                  </div>
+                `;
+              });
+        </script>
+        
+    </body>
+</html>

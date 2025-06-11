@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+        <!-- font awesome -->
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--  -->
+        <!-- owl stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="css/owl.carousel.min.css">
+            <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen"> -->
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <!-- bootstrap css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <link rel="stylesheet" type="text/css" href="css/responsive-two.css">
+    </head>
+    <body>
+        
+        <div class="product-banner-section">
+            <!-- header top section start -->
+            <div class="container">
+                <div class="header_section_top" id="common-header-top">
+                </div>
+            </div>
+            <!-- header top section start -->
+            <div class="container">
+                <div class="product-banner-area">
+                    <div class="product-banner-row row">
+                        <div class="col-12 col-lg-7 col-md-7 col-sm-6 col-xs-12 product-banner-left">
+                            <div class="product-banner-title-area">
+                                <h1>Shop New Arrivals</h1>
+                                <p class="breadcrumb-area"><span class="previous-page">Home</span> > <span class="current-page">New Arrivals</span></p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-5 col-md-5 col-sm-6 col-xs-12 product-banner-right">
+                            <div class="product-banner-img">
+                                <img src="images/new-arrival-collection2.png" alt="Product">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+          
+          <section class="cart_area padding_top">
+            <div class="container">
+                <div class="cart_inner">
+                    <div class="table-responsive">
+                        <table class="table cart-items-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col">&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-body">
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="table bottom-total-table">
+                        <tbody>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><h5>Shipping</h5></td>
+                                <td><h5 class="price-area">Free</h5></td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td><h5>Total</h5></td>
+                                <td><h5 class="price-area" id="subtotal"></h5></td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- <div class="subtotal-area"><h4 id="subtotal"></h4></div> -->
+                    <div class="checkout_btn_inner">
+                        <a class="shop-btn shop-outline-btn" href="#">Continue Shopping</a>
+                        <a id="proceed-checkout" class="shop-btn" href="#">Proceed to checkout</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- footer section start -->
+        <div class="footer_section" id="footer-section"></div>
+        <!-- footer section end -->
+         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- for header -->
+        <script src="header.js"></script>
+        <!-- for footer -->
+        <script src="footer.js"></script>
+
+        <script>
+            function getCart() {
+                return JSON.parse(localStorage.getItem('cart')) || [];
+            }
+
+            function saveCart(cart) {
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+
+            function updateCart() {
+                const cart = getCart();
+                const tbody = document.getElementById('cart-body');
+                tbody.innerHTML = '';
+
+                if (cart.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4">Cart is empty</td></tr>';
+                document.getElementById('subtotal').textContent = '';
+                return;
+                }
+
+                let subtotal = 0;
+
+                cart.forEach((item, i) => {
+                    const total = item.price * item.quantity;
+                    subtotal = subtotal + total;
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>
+                            <div class="media">
+                                <div class="d-flex">
+                                    <img src="${item.image}" alt="${item.name}">
+                                </div>
+                                <div class="media-body">
+                                    <p>${item.name}</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>$${item.price.toFixed(2)}</td>
+                        <td>
+                        <div class="product_count">
+                            <button class="number-decrement" onclick="changeQuantity(${i}, -1)">-</button>
+                                <input class="input-number" id="quantity-box" type="text" value="${item.quantity}" min="1" max="5">
+                            <button class="number-increment" onclick="changeQuantity(${i}, 1)">+</button>
+                        </div>
+                        </td>
+                        <td>$${total.toFixed(2)}</td>
+                        <td><button class="btn delete-item" data-id="${item.id}"></button></td>
+                    `;
+                    tbody.appendChild(row);
+                });
+
+
+
+                function removeFromCart(id) {
+                    let cart = getCart();
+                    cart = cart.filter(item => item.id != id); // remove matching item
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    location.reload(); // refresh to update cart display
+                }
+
+                document.getElementById('subtotal').textContent = '$' + subtotal.toFixed(2);
+
+                document.addEventListener("click", function (e) {
+                    if (e.target.classList.contains("delete-item")) {
+                        const productId = e.target.getAttribute("data-id");
+                        removeFromCart(productId);
+                    }
+                });
+            }
+
+
+
+            function changeQuantity(index, delta) {
+                const cart = getCart();
+                let qty = cart[index].quantity + delta;
+                if (qty < 1) qty = 1;
+                cart[index].quantity = qty;
+                saveCart(cart);
+                updateCart();
+                }
+
+            // //For cart counter
+            function updateCartCount() {
+            const cart = getCart();
+           const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('header-cart-count').textContent = totalItems;
+             }
+            document.addEventListener('DOMContentLoaded', updateCartCount);
+
+            document.addEventListener('DOMContentLoaded', updateCart);
+
+             updateCartCount();
+        </script>
+
+
+        <script>
+        document.getElementById('proceed-checkout').addEventListener('click', function () {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (cart.length === 0) {
+            alert('Your cart is empty.');
+            return;
+            }
+            // Navigate to checkout
+            window.location.href = 'checkout.html';
+        });
+        </script>
+
+        
+    </body>
+</html>

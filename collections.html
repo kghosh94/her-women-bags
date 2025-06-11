@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+        <!-- font awesome -->
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+        <!-- owl stylesheets -->
+        <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <!-- bootstrap css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        
+        <div class="product-banner-section">
+            <!-- header top section start -->
+            <div class="container">
+                <div class="header_section_top" id="common-header-top">
+                </div>
+            </div>
+            <!-- header top section start -->
+            <div class="container">
+                <div class="product-banner-area">
+                    <div class="product-banner-row row">
+                        <div class="col-12 col-lg-7 col-md-7 col-sm-6 col-xs-12 product-banner-left">
+                            <div class="product-banner-title-area">
+                                <h1>Shop New Arrivals</h1>
+                                <p class="breadcrumb-area"><span class="previous-page">Home</span> > <span class="current-page">New Arrivals</span></p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-5 col-md-5 col-sm-6 col-xs-12 product-banner-right">
+                            <div class="product-banner-img">
+                                <img src="images/new-arrival-collection2.png" alt="Product">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+          
+        <section class="product-filter-area">
+            <div class="container">
+                <div class="product-filter-row">
+                    <div class="filter-title">
+                        <h5>Sort By</h5>
+                    </div>
+                    <div class="filter-content-area">
+                        <div class="filter-dropdown">
+                            <select id="sort-dropdown" class="form-select" aria-label="Default select example">
+                                <option value="default" selected>Default</option>
+                                <option value="low-to-high">Price: Low to High</option>
+                                <option value="high-to-low">Price: High to Low</option>
+                            </select>
+                        </div>
+                        <div class="filter-dropdown">
+                            <select id="collection-dropdown" class="form-select" aria-label="Default select example">
+                                <option value="all" selected>All Collections</option>
+                                <option value="new-arrivals">New Arrivals</option>
+                                <option value="trending">Trending</option>
+                                <option value="custom-made">Custom Made</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="collections-listing-section">
+            <h2 class="collection_title" id="main-collection-title">All Collections</h2>
+            <div class="container">
+                <div class="row collections-row" id="all-collections">
+                </div>
+            </div>
+        </section>
+
+        <!--Start sale banner section-->
+        <div class="common-sale-banner-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-5 col-md-5 col-sm-12">
+                        <div class="sale-banner-back">
+                            <div class="sale-model-area">
+                                <img src="images/sale-banner-model.png" alt="Banner">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-7 col-md-7 col-sm-12">
+                        <div class="sale-banner-content">
+                            <h2>End of season 2025 sale up to 30%</h2>
+                            <h3>Stock is limited. Order now to avoid disappointment.</h3>
+                            <a href="#" class="shop-btn">Get it now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//End sale banner section-->
+
+        <!-- footer section start -->
+        <div class="footer_section" id="footer-section"></div>
+        <!-- footer section end -->
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        
+        
+        <!-- for header -->
+        <script src="header.js"></script>
+
+        <!-- for footer -->
+        <script src="footer.js"></script>
+        
+        <script>
+            //Fetching all products from JSON file and display
+
+
+
+            // Fetching product data from JSON file and rendering collections
+            fetch('all-products.json')
+            .then(response => response.json())
+            .then(data => {
+                renderCollection(data);
+            });
+
+                function renderCollection(products) {
+                    const container = document.getElementById('all-collections');
+                    container.innerHTML = ''; // Clear existing content
+
+                    products.forEach(product => {
+                        const productCard = document.createElement('div');
+                        productCard.className = 'col-12 col-lg-4 col-md-4 col-sm-6 col-xs-12 collections-col';
+
+                        productCard.innerHTML = `
+                            <div class="box_main">
+                                <a class="product_card_link" href="product-detail.html?id=${product.id}">
+                                <div class="product_card_img">
+                                    <img src="${product.image}" alt="${product.name}">
+                                </div>
+                                </a>  
+                                <h4 class="product_card_titile">${product.name}</h4>
+                                <p class="price_text">
+                                    Price <span style="color: #262626;">$${product.price.toFixed(2)}</span>
+                                </p>
+                                <p class="product_rating"><span class="review-no"><i class="fa fa-star" aria-hidden="true"></i> ${product.rating}</span>(${product.noOfReview})</p>
+                                <div class="btn_main">
+                                    <div class="buy_bt">
+                                    <a href="product-detail.html?id=${product.id}">Buy Now</a>
+                                    </div>
+                                    <div class="seemore_bt">
+                                    <a href="product-detail.html?id=${product.id}">See More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        container.appendChild(productCard);
+                    });
+                }
+
+            //product sorting by the price from low to high and high to low
+            document.getElementById('sort-dropdown').addEventListener('change', function() {
+                const sortValue = this.value;
+                const allProducts = document.querySelectorAll('.collections-col');
+                const productsArray = Array.from(allProducts);
+
+                if (sortValue === 'low-to-high') {
+                    productsArray.sort((a, b) => {
+                        const priceA = parseFloat(a.querySelector('.price_text span').textContent.replace('$', ''));
+                        const priceB = parseFloat(b.querySelector('.price_text span').textContent.replace('$', ''));
+                        return priceA - priceB;
+                    });
+                } else if (sortValue === 'high-to-low') {
+                    productsArray.sort((a, b) => {
+                        const priceA = parseFloat(a.querySelector('.price_text span').textContent.replace('$', ''));
+                        const priceB = parseFloat(b.querySelector('.price_text span').textContent.replace('$', ''));
+                        return priceB - priceA;
+                    });
+
+                }  else {
+                    // If default, we can just re-render the original order
+                    fetch('all-products.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            renderCollection(data);
+                    });
+                    
+                }
+
+                const container = document.querySelector('.collections-row');
+                container.innerHTML = '';
+                productsArray.forEach(product => container.appendChild(product));
+            });
+
+
+            // Filter products by collection type
+            document.getElementById('collection-dropdown').addEventListener('change', function() {
+                const collectionValue = this.value;
+                document.getElementById('main-collection-title').innerHTML ='All Collections';
+                // const allProducts = document.querySelectorAll('.collections-col');
+                // const productsArray = Array.from(allProducts);
+
+                if (collectionValue === 'all') {
+                    fetch('all-products.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            renderCollection(data);
+                    });
+                } else {
+                    fetch('all-products.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const filterProduct = data.filter( product => {
+                            if (collectionValue === 'new-arrivals') {
+                                document.getElementById('main-collection-title').innerHTML =' New Arrivals';
+                                return product.collection === 'New Arrivals';
+                            }
+                            else if (collectionValue === 'trending') {
+                                document.getElementById('main-collection-title').innerHTML ='Trending';
+                                return product.collection === 'Trending';
+                            }
+                            else if (collectionValue === 'custom-made') {
+                                document.getElementById('main-collection-title').innerHTML ='Custom Made';
+                                return product.collection === 'Custom Made';
+                            }
+                            return true; // Default case, return all products
+                        });
+                        renderCollection(filterProduct);
+                    });
+                }
+            });
+        </script>
+        
+    </body>
+</html>

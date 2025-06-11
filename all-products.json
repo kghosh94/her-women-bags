@@ -1,0 +1,288 @@
+[
+    {
+    "id": 1,
+    "name": "Harriet Vegan Backpack",
+    "price": 89.99,
+    "rating": 4.1,
+    "noOfReview": 124,
+    "image": "images/products/new-arrivals/na-1.jpg",
+    
+    "productSlider": [
+        "images/products/new-arrivals/na-1.jpg",
+        "images/products/new-arrivals/na-1.jpg",
+        "images/products/new-arrivals/na-1.jpg",
+        "images/products/new-arrivals/na-1.jpg",
+        "images/products/new-arrivals/na-1.jpg"
+    ],
+    "description": "Casual crossbody bag made with durable canvas.",
+    "collection": "New Arrivals",
+    "url": "product-detail.html?id=1"
+    
+  },
+  {
+    "id": 2,
+    "name": "Lenny Vegan Tote Bag",
+    "price": 90.99,
+    "rating": 4.4,
+    "noOfReview": 2245,
+    "image": "images/products/new-arrivals/na-2.jpg",
+    
+    "productSlider": [
+        "images/products/new-arrivals/na-2.jpg",
+        "images/products/new-arrivals/na-2.jpg",
+        "images/products/new-arrivals/na-2.jpg",
+        "images/products/new-arrivals/na-2.jpg",
+        "images/products/new-arrivals/na-2.jpg"
+    ],
+    "description": "Casual crossbody bag made with durable canvas.",
+    "collection": "New Arrivals",
+    "url": "product-detail.html?id=2"
+  },
+  {
+    "id": 3,
+    "name": "Juliet Shopper Bag",
+    "price": 40.99,
+    "rating": 3.8,
+    "noOfReview": 221,
+    "image": "images/products/new-arrivals/na-3.jpg",
+    
+    "productSlider": [
+        "images/products/new-arrivals/na-3.jpg",
+        "images/products/new-arrivals/na-3.jpg",
+        "images/products/new-arrivals/na-3.jpg",
+        "images/products/new-arrivals/na-3.jpg",
+        "images/products/new-arrivals/na-3.jpg"
+    ],
+    "description": "Casual crossbody bag made with durable canvas.",
+    "collection": "New Arrivals",
+    "url": "product-detail.html?id=3"
+  },
+  {
+    "id": 4,
+    "name": "Lucy Mini Bucket Bag",
+    "price": 80.99,
+    "rating": 4.8,
+    "noOfReview": 1357,
+    "image": "images/products/new-arrivals/na-4.jpg",
+    
+    "productSlider": [
+        "images/products/new-arrivals/na-4.jpg",
+        "images/products/new-arrivals/na-4.jpg",
+        "images/products/new-arrivals/na-4.jpg",
+        "images/products/new-arrivals/na-4.jpg",
+        "images/products/new-arrivals/na-4.jpg"
+    ],
+    "description": "Casual crossbody bag made with durable canvas.",
+    "collection": "New Arrivals",
+    "url": "product-detail.html?id=4"
+  },
+  {
+    "id": 5,
+    "name": "Snake-Effect Bowler Bag",
+    "price": 60.99,
+    "rating": 4.2,
+    "noOfReview": 1220,
+    "image": "images/products/new-arrivals/na-5.jpg",
+    
+    "productSlider": [
+        "images/products/new-arrivals/na-5.jpg",
+        "images/products/new-arrivals/na-5.jpg",
+        "images/products/new-arrivals/na-5.jpg",
+        "images/products/new-arrivals/na-5.jpg",
+        "images/products/new-arrivals/na-5.jpg"
+    ],
+    "description": "Casual crossbody bag made with durable canvas.",
+    "collection": "New Arrivals",
+    "url": "product-detail.html?id=5"
+  },
+  {
+    "id": 6,
+    "name": "Canvas Crossbody",
+    "price": 67.99,
+    "rating": 4.7,
+    "noOfReview": 1135,
+    "image": "images/products/trending/t1.jpg",
+    
+    "productSlider": [
+        "images/products/trending/t1.jpg",
+        "images/products/trending/t1.jpg",
+        "images/products/trending/t1.jpg",
+        "images/products/trending/t1.jpg",
+        "images/products/trending/t1.jpg"
+    ],
+    "description": "Trending crossbody bag made with durable canvas.",
+    "collection": "Trending",
+    "url": "product-detail.html?id=6"
+  },
+  {
+    "id": 7,
+    "name": "Colorful bags",
+    "price": 80.99,
+    "rating": 4.2,
+    "noOfReview": 1445,
+    "image": "images/products/trending/t2.jpg",
+    
+    "productSlider": [
+        "images/products/trending/t2.jpg",
+        "images/products/trending/t2.jpg",
+        "images/products/trending/t2.jpg",
+        "images/products/trending/t2.jpg",
+        "images/products/trending/t2.jpg"
+    ],
+    "description": "Trending crossbody bag made with durable canvas.",
+    "collection": "Trending",
+    "url": "product-detail.html?id=7"
+  },
+  {
+    "id": 8,
+    "name": "Bespoke Clutch",
+    "price": 129.99,
+    "rating": 4.1,
+    "noOfReview": 1233,
+    "image": "images/products/trending/t3.jpg",
+    
+    "productSlider": [
+        "images/products/trending/t3.jpg",
+        "images/products/trending/t3.jpg",
+        "images/products/trending/t3.jpg",
+        "images/products/trending/t3.jpg",
+        "images/products/trending/t3.jpg"
+    ],
+    "description": "Trending clutch tailored to your style.",
+    "collection": "Trending",
+    "url": "product-detail.html?id=8"
+  },
+  {
+    "id": 9,
+    "name": "Cylindrical bag",
+    "price": 119.99,
+    "rating": 3.5,
+    "noOfReview": 1235,
+    "image": "images/products/trending/t4.jpg",
+    
+    "productSlider": [
+        "images/products/trending/t4.jpg",
+        "images/products/trending/t4.jpg",
+        "images/products/trending/t4.jpg",
+        "images/products/trending/t4.jpg",
+        "images/products/trending/t4.jpg"
+    ],
+    "description": "Trending clutch tailored to your style.",
+    "collection": "Trending",
+    "url": "product-detail.html?id=9"
+  },
+  {
+    "id": 10,
+    "name": "Large bag",
+    "price": 109.99,
+    "rating": 4.8,
+    "noOfReview": 2254,
+    "image": "images/products/trending/t5.jpg",
+    
+    "productSlider": [
+        "images/products/trending/t5.jpg",
+        "images/products/trending/t5.jpg",
+        "images/products/trending/t5.jpg",
+        "images/products/trending/t5.jpg",
+        "images/products/trending/t5.jpg"
+    ],
+    "description": "Trending clutch tailored to your style.",
+    "collection": "Trending",
+    "url": "product-detail.html?id=10"
+  },
+  {
+    "id": 11,
+    "name": "Bags with handles",
+    "price": 50.99,
+    "rating": 4.8,
+    "noOfReview": 472,
+    "image": "images/products/custom-made/cm-1.jpg",
+    
+    "productSlider": [
+        "images/products/custom-made/cm-1.jpg",
+        "images/products/custom-made/cm-1.jpg",
+        "images/products/custom-made/cm-1.jpg",
+        "images/products/custom-made/cm-1.jpg",
+        "images/products/custom-made/cm-1.jpg"
+    ],
+    "description": "handmade clutch tailored to your style.",
+    "collection": "Custom Made",
+    "url": "product-detail.html?id=11"
+  },
+  {
+    "id": 12,
+    "name": "Cylindrical bag",
+    "price": 119.99,
+    "rating": 3.5,
+    "noOfReview": 235,
+    "image": "images/products/custom-made/cm-2.jpg",
+    
+    "productSlider": [
+        "images/products/custom-made/cm-2.jpg",
+        "images/products/custom-made/cm-2.jpg",
+        "images/products/custom-made/cm-2.jpg",
+        "images/products/custom-made/cm-2.jpg",
+        "images/products/custom-made/cm-2.jpg"
+    ],
+    "description": "handmade clutch tailored to your style.",
+    "collection": "Custom Made",
+    "url": "product-detail.html?id=12"
+  },
+  {
+    "id": 13,
+    "name": "Crossbody bag",
+    "price": 70.00,
+    "rating": 4.5,
+    "noOfReview": 4576,
+    "image": "images/products/custom-made/cm-3.jpg",
+    
+    "productSlider": [
+        "images/products/custom-made/cm-3.jpg",
+        "images/products/custom-made/cm-3.jpg",
+        "images/products/custom-made/cm-3.jpg",
+        "images/products/custom-made/cm-3.jpg",
+        "images/products/custom-made/cm-3.jpg"
+    ],
+    "description": "handmade clutch tailored to your style.",
+    "collection": "Custom Made",
+    "url": "product-detail.html?id=13"
+  },
+  {
+    "id": 14,
+    "name": "Rino bag",
+    "price": 90.00,
+    "rating": 4.6,
+    "noOfReview": 2223,
+    "image": "images/products/custom-made/cm-4.jpg",
+    
+    "productSlider": [
+        "images/products/custom-made/cm-4.jpg",
+        "images/products/custom-made/cm-4.jpg",
+        "images/products/custom-made/cm-4.jpg",
+        "images/products/custom-made/cm-4.jpg",
+        "images/products/custom-made/cm-4.jpg"
+    ],
+    "description": "handmade clutch tailored to your style.",
+    "collection": "Custom Made",
+    "url": "product-detail.html?id=14"
+  },
+  {
+    "id": 15,
+    "name": "Colorful bags",
+    "price": 80.99,
+    "rating": 4.2,
+    "noOfReview": 1345,
+    "image": "images/products/custom-made/cm-5.jpg",
+    
+    "productSlider": [
+        "images/products/custom-made/cm-5.jpg",
+        "images/products/custom-made/cm-5.jpg",
+        "images/products/custom-made/cm-5.jpg",
+        "images/products/custom-made/cm-5.jpg",
+        "images/products/custom-made/cm-5.jpg"
+    ],
+    "description": "handmade clutch tailored to your style.",
+    "collection": "Custom Made",
+    "url": "product-detail.html?id=15"
+  }
+]
