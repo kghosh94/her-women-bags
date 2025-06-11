@@ -303,30 +303,36 @@
                   </div>
                 `;
               });
-
-              // ...inside .then(products => { ... }) after you have the product object...
-
-            function renderBreadcrumb(items) {
-                const container = document.getElementById('breadcrumb-area');
-                if (!container) return;
-                container.innerHTML = items.map((item, idx) => {
-                    if (item.url && idx !== items.length - 1) {
-                        return `<a href="${item.url}">${item.name}</a>`;
-                    } else {
-                        return `<span>${item.name}</span>`;
-                    }
-                }).join(' &gt; ');
-            }
-
-            // Example: Build breadcrumb based on product
-            if (product) {
-                renderBreadcrumb([
-                    { name: "Home", url: "index.html" },
-                    { name: product.collection || "Collections", url: "collections.html" },
-                    { name: product.name }
-                ]);
-            }
         </script>
+
+        <script>
+            function createBreadcrumb() {
+                const breadcrumbContainer = document.getElementById("breadcrumb-area");
+                const pathParts = window.location.pathname.split("/").filter(part => part);
+
+                let fullPath = "/";
+                let breadcrumbHTML = `<a href="/">Home</a>`;
+
+                pathParts.forEach((part, index) => {
+                fullPath += part + "/";
+
+                // Capitalize and replace hyphens with spaces
+                const title = part.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+
+                if (index === pathParts.length - 1) {
+                    // Last item (active)
+                    breadcrumbHTML += ` / <span>${title}</span>`;
+                } else {
+                    breadcrumbHTML += ` / <a href="${fullPath}">${title}</a>`;
+                }
+                });
+
+                breadcrumbContainer.innerHTML = breadcrumbHTML;
+            }
+
+            document.addEventListener("DOMContentLoaded", createBreadcrumb);
+        </script>
+
         
     </body>
 </html>
