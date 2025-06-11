@@ -66,6 +66,20 @@
         font-size: 20px;
         line-height: 30px;
     }
+    .single-product-image-banner-area .product-banner-img:before {
+        width: 250px;
+        height: 90px;
+        top: -17px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .single-product-image-banner-area .product-banner-img img {
+        max-width: 320px;
+    }
+    .single-product-image-banner-area .product-banner-img {
+        bottom: -10px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -213,6 +227,17 @@
     }
     .billing_details {
         margin-bottom: 40px;
+    }
+    .single-product-image-banner-area .product-banner-img:before {
+        width: 220px;
+        height: 80px;
+        top: -24px;
+    }
+    .single-product-image-banner-area .product-banner-img img {
+        max-width: 250px;
+    }
+    .single-product-image-banner-area .product-banner-img {
+        bottom: -10px;
     }
 }
 
