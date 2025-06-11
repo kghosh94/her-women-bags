@@ -1201,6 +1201,8 @@ a:hover {
     top: unset;
     font-weight: 600;
     color: #028f22;
+    font-size: 14px;
+    text-align: center;
 }
 /*************************** //End product page css*************************/
 

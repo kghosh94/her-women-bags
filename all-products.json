@@ -5,7 +5,7 @@
     "price": 89.99,
     "rating": 4.1,
     "noOfReview": 124,
-    "image": "images/products/new-arrivals/na-1.jpg",
+    "image": "images/products/new-arrivals/na-1.png",
     
     "productSlider": [
         "images/products/new-arrivals/na-1.jpg",
@@ -25,7 +25,7 @@
     "price": 90.99,
     "rating": 4.4,
     "noOfReview": 2245,
-    "image": "images/products/new-arrivals/na-2.jpg",
+    "image": "images/products/new-arrivals/na-2.png",
     
     "productSlider": [
         "images/products/new-arrivals/na-2.jpg",
@@ -44,7 +44,7 @@
     "price": 40.99,
     "rating": 3.8,
     "noOfReview": 221,
-    "image": "images/products/new-arrivals/na-3.jpg",
+    "image": "images/products/new-arrivals/na-3.png",
     
     "productSlider": [
         "images/products/new-arrivals/na-3.jpg",
@@ -63,7 +63,7 @@
     "price": 80.99,
     "rating": 4.8,
     "noOfReview": 1357,
-    "image": "images/products/new-arrivals/na-4.jpg",
+    "image": "images/products/new-arrivals/na-4.png",
     
     "productSlider": [
         "images/products/new-arrivals/na-4.jpg",
@@ -82,7 +82,7 @@
     "price": 60.99,
     "rating": 4.2,
     "noOfReview": 1220,
-    "image": "images/products/new-arrivals/na-5.jpg",
+    "image": "images/products/new-arrivals/na-5.png",
     
     "productSlider": [
         "images/products/new-arrivals/na-5.jpg",
@@ -101,7 +101,7 @@
     "price": 67.99,
     "rating": 4.7,
     "noOfReview": 1135,
-    "image": "images/products/trending/t1.jpg",
+    "image": "images/products/trending/t1.png",
     
     "productSlider": [
         "images/products/trending/t1.jpg",
@@ -120,7 +120,7 @@
     "price": 80.99,
     "rating": 4.2,
     "noOfReview": 1445,
-    "image": "images/products/trending/t2.jpg",
+    "image": "images/products/trending/t2.png",
     
     "productSlider": [
         "images/products/trending/t2.jpg",
@@ -139,7 +139,7 @@
     "price": 129.99,
     "rating": 4.1,
     "noOfReview": 1233,
-    "image": "images/products/trending/t3.jpg",
+    "image": "images/products/trending/t3.png",
     
     "productSlider": [
         "images/products/trending/t3.jpg",
@@ -196,7 +196,7 @@
     "price": 50.99,
     "rating": 4.8,
     "noOfReview": 472,
-    "image": "images/products/custom-made/cm-1.jpg",
+    "image": "images/products/custom-made/cm-1.png",
     
     "productSlider": [
         "images/products/custom-made/cm-1.jpg",
@@ -215,7 +215,7 @@
     "price": 119.99,
     "rating": 3.5,
     "noOfReview": 235,
-    "image": "images/products/custom-made/cm-2.jpg",
+    "image": "images/products/custom-made/cm-2.png",
     
     "productSlider": [
         "images/products/custom-made/cm-2.jpg",
@@ -234,7 +234,7 @@
     "price": 70.00,
     "rating": 4.5,
     "noOfReview": 4576,
-    "image": "images/products/custom-made/cm-3.jpg",
+    "image": "images/products/custom-made/cm-3.png",
     
     "productSlider": [
         "images/products/custom-made/cm-3.jpg",

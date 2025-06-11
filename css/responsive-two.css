@@ -537,6 +537,10 @@
     .product-banner-section .confirmation-banner-area {
         padding: 100px 0 30px 0;
     }
+    #cart-popup {
+        z-index: 99;
+        width: 85%;
+    }
 }
 
 
