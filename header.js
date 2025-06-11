@@ -5,27 +5,33 @@ const headerMenu = [
     active: true
   },
   { 
-    name: "New Arrivals", 
-    link: "new-arrivals.html", 
-    id: "new-arrivals-page",
+    name: "Contact Us", 
+    link: "#", 
+    id: "contact-us-page",
     active: false
   },
   { 
-    name: "Trending", 
-    link: "trending.html", 
-    id: "trending-page",
+    name: "About Us", 
+    link: "#", 
+    id: "about-us-page",
     active: false
   },
   { 
-    name: "Custom Made", 
-    link: "custom-made.html", 
-    id: "custom-made-page",
+    name: "Return Policy", 
+    link: "#", 
+    id: "return-policy-page",
     active: false
 },
   { 
-    name: "Our Collections", 
-    link: "all-collection.html", 
-    id: "all-collection-page",
+    name: "Privacy policy", 
+    link: "#", 
+    id: "privacy-policy-page",
+    active: false
+  },
+  { 
+    name: "Temrs & Condition", 
+    link: "#", 
+    id: "temrs-page",
     active: false
   }
 ];
