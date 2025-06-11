@@ -36,7 +36,7 @@
                         <div class="col-12 col-lg-7 col-md-7 col-sm-12 col-xs-12 product-banner-left">
                             <div class="product-banner-title-area">
                                 <h1>Shop New Arrivals</h1>
-                                <p id="breadcrumb-area"></p>
+                                <p id="breadcrumb-area" class="breadcrumb-area"></p>
                                 <!-- <p class="breadcrumb-area"><span class="previous-page">Home</span> > <span class="current-page">New Arrivals</span></p> -->
                             </div>
                         </div>
@@ -314,13 +314,15 @@
                 let breadcrumbHTML = `<a href="/">Home</a>`;
 
                 pathParts.forEach((part, index) => {
+                // Remove ".html" if present
+                const cleanPart = part.replace(/\.html$/, "");
+                const title = cleanPart
+                    .replace(/-/g, ' ')
+                    .replace(/\b\w/g, char => char.toUpperCase());
+
                 fullPath += part + "/";
 
-                // Capitalize and replace hyphens with spaces
-                const title = part.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
-
                 if (index === pathParts.length - 1) {
-                    // Last item (active)
                     breadcrumbHTML += ` / <span>${title}</span>`;
                 } else {
                     breadcrumbHTML += ` / <a href="${fullPath}">${title}</a>`;
@@ -331,7 +333,7 @@
             }
 
             document.addEventListener("DOMContentLoaded", createBreadcrumb);
-        </script>
+            </script>
 
         
     </body>
