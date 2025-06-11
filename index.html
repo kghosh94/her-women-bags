@@ -80,7 +80,7 @@
                     <div class="single_feature_post_text">
                         <p>Premium Quality</p>
                         <h3>New Arrivals</h3>
-                        <a href="#" class="feature_btn">EXPLORE NOW ></a>
+                        <a href="#new-arrival-section" class="feature_btn">EXPLORE NOW ></a>
                         <img src="images/new-arrival-collection-bag.png" alt="New Arrivals">
                     </div>
                 </div>
@@ -114,7 +114,7 @@
     <!--// End featured category-->
 
     <!--New Arrival-->
-    <section class="product_collection_area new_arrivals_area">
+    <section class="product_collection_area new_arrivals_area" id="new-arrival-section">
         <h2 class="collection_title">New Arrivals</h2>
         <div class="container home-slider-area">
             <div class="swiper new_arrivals_slider slider_items_area">
@@ -286,7 +286,18 @@
             },
         },
         });
+    </script>
 
+    <script>
+        //javascript smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        }); 
     </script>
 
     </body>
