@@ -1648,6 +1648,13 @@ a:hover {
 .collections-listing-section .collection_title {
     margin-bottom: 20px;
 }
+.collections-row .collections-col {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.collections-listing-section .box_main {
+    margin-bottom: 20px;
+}
 .collections-listing-section .box_main {
     margin-bottom: 30px;
 }
