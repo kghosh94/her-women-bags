@@ -705,4 +705,7 @@
     .copyright_text {
         font-size: 14px;
     }
+    .banner-bottom-border-area {
+        display: none;
+    }
 }

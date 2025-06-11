@@ -743,6 +743,10 @@ a:hover {
     padding: 12px 15px 12px 15px;
     border-radius: 4px;
 }
+.feature_part .single_feature_post_text .feature_btn:hover {
+    background: #f29374;
+    color: #ffffff;
+}
 .feature_part .single_feature_post_text img {
     position: absolute;
     bottom: 20px;
