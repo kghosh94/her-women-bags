@@ -1,4 +1,10 @@
 @media (max-width: 1200px) {
+    .banner-bottom-border-area .banner-border {
+        height: 14px;
+        width: 100%;
+        background-color: #DFB5A7;
+        margin: 0 0 14px;
+    }
     .banner-prodcut-model .banner-product {
         max-width: 450px;
         width: 100%;
