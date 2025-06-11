@@ -466,6 +466,20 @@
         margin-left: auto;
         margin-right: auto;
     }
+    .single-product-image-banner-area .product-banner-img img {
+        max-width: 220px;
+    }
+    .single-product-banner-section .single-product-image-banner-area {
+        height: 400px;
+        padding-bottom: 0!important;
+    }
+    .single-product-image-banner-area .product-banner-img {
+        bottom: -60px;
+        margin-top: 0!important;
+    }
+    .single-product-image-banner-area .product-banner-left .breadcrumb-area {
+        font-size: 14px;
+    }
 }
 
 
