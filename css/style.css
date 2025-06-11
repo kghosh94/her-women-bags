@@ -314,6 +314,7 @@ button {
     background-repeat: no-repeat;
     height: 620px;
     margin-bottom: 90px;
+    position: relative;
 }
 .main_banner_content h2 {
     font-size: 78px;
@@ -347,6 +348,20 @@ button {
     height: 100%;
     padding: 50px 0 50px;
 }
+.banner-bottom-border-area .banner-border {
+    height: 26px;
+    width: 100%;
+    background-color: #DFB5A7;
+    margin: 0 0 26px;
+}
+.banner-bottom-border-area {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+}
 .main-banner-container .main_banner_content {
     max-width: 520px;
     width: 100%;
@@ -356,6 +371,7 @@ button {
     position: absolute;
     right: -100px;
     bottom: 0;
+    z-index: 9;
 }
 .banner-prodcut-model .banner-product {
     max-width: 600px;
