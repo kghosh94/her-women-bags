@@ -1360,7 +1360,7 @@ a:hover {
 .single-product-banner-section {
     overflow: hidden;
 }
-.single-product-image-banner-area {
+.single-product-banner-section .single-product-image-banner-area {
     height: 400px;
     padding: 0px 0px 0px 0px;
 }
