@@ -239,6 +239,9 @@
     .single-product-image-banner-area .product-banner-img {
         bottom: -10px;
     }
+    .single-product-banner-section .single-product-image-banner-area {
+        height: 330px;
+    }
 }
 
 
