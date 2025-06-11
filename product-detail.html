@@ -193,6 +193,9 @@
                         <div class="product-btn-group d-flex justify-content-start align-items-center">
                             <button type="button" class="btn_3 add-to-cart-btn shop-btn">add to cart</button>
                         </div>
+                        <div class="alert alert-success" role="alert" id="cart-popup">
+                            <p id="cart-popup-message"></p>
+                        </div>
                     </div>
                   `;
                 
@@ -275,7 +278,24 @@
                     updateCartCount();
                     
                     // Optional: feedback to user
-                    alert(`${product.name} (${ProductQuantity}) added to cart!`);
+                    // Show confirmation popup
+                        const popup = document.getElementById('cart-popup');
+                        const popupMsg = document.getElementById('cart-popup-message');
+                        popupMsg.textContent = `${product.name} (${ProductQuantity}) added to cart! Please check your cart for details.`;
+                        popup.style.position = 'fixed';
+                        popup.style.display = 'block';
+
+                        // Auto-hide after 2 seconds
+                        setTimeout(() => {
+                        popup.style.display = 'none';
+                        }, 2000);
+
+                        // Allow manual close
+                        document.getElementById('cart-popup-close').onclick = function() {
+                        popup.style.display = 'none';
+                        };
+
+                    // alert(`${product.name} (${ProductQuantity}) added to cart!`);
 
                     // function getCart() {
                     //     return JSON.parse(localStorage.getItem('cart')) || [];
