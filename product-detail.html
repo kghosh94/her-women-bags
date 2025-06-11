@@ -36,7 +36,8 @@
                         <div class="col-12 col-lg-7 col-md-7 col-sm-12 col-xs-12 product-banner-left">
                             <div class="product-banner-title-area">
                                 <h1>Shop New Arrivals</h1>
-                                <p class="breadcrumb-area"><span class="previous-page">Home</span> > <span class="current-page">New Arrivals</span></p>
+                                <p class="breadcrumb-area"></p>
+                                <!-- <p class="breadcrumb-area"><span class="previous-page">Home</span> > <span class="current-page">New Arrivals</span></p> -->
                             </div>
                         </div>
                         <div class="col-12 col-lg-5 col-md-5 col-sm-12 col-xs-12 product-banner-right">
@@ -302,6 +303,29 @@
                   </div>
                 `;
               });
+
+              // ...inside .then(products => { ... }) after you have the product object...
+
+            function renderBreadcrumb(items) {
+                const container = document.getElementById('breadcrumb-area');
+                if (!container) return;
+                container.innerHTML = items.map((item, idx) => {
+                    if (item.url && idx !== items.length - 1) {
+                        return `<a href="${item.url}">${item.name}</a>`;
+                    } else {
+                        return `<span>${item.name}</span>`;
+                    }
+                }).join(' &gt; ');
+            }
+
+            // Example: Build breadcrumb based on product
+            if (product) {
+                renderBreadcrumb([
+                    { name: "Home", url: "index.html" },
+                    { name: product.collection || "Collections", url: "collections.html" },
+                    { name: product.name }
+                ]);
+            }
         </script>
         
     </body>
