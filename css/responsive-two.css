@@ -514,6 +514,12 @@
     .product-filter-area .filter-title h5 {
         font-size: 15px;
         margin: 0 0 10px;
+        text-align: center;
+    }
+    .product-filter-area .filter-dropdown select {
+        height: 28px;
+        padding: 5px 10px 5px 10px;
+        font-size: 12px;
     }
     .product-filter-row .filter-content-area {
         display: flex;

@@ -709,7 +709,7 @@ a:hover {
 .feature_part .single_feature_post_text {
     padding: 50px;
     background-color: #f5f5f5;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
     height: 400px;
 }
@@ -753,6 +753,10 @@ a:hover {
     right: 15px;
     max-width: 220px;
     width: 100%;
+}
+.feature_part  .category_box {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .category_box:first-child .single_feature_post_text img {
     max-width: 220px;
