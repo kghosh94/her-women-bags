@@ -1193,6 +1193,7 @@ a:hover {
     max-width: 650px;
     z-index: 99;
     border: 1px solid #028f22;
+    display: none;
 }
 #cart-popup-message {
     margin: 0;
